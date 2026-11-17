@@ -1,0 +1,47 @@
+# === Book Configuration ===
+# Edit this file for each new book
+
+book_name: "Minh Mệnh chính yếu tập 1"
+pdf_path: "source.pdf"
+
+# Page ranges (1-indexed, inclusive)
+# Layout type: T1 (Quốc Ngữ first half, Nôm second half)
+layout_type: "T1"
+
+pages:
+  total: 638
+
+  # Vietnamese (Quốc Ngữ) content pages
+  vi_start: 9
+  vi_end: 224
+
+  # Hán Nôm content pages  
+  ch_start: 228
+  ch_end: 632
+
+  # Special pages (lists of 1-indexed page numbers)
+  misc: [1, 226, 637]          # covers, colophon, decorative
+  blank: [2, 4, 6, 8, 14, 20, 26, 28, 30, 60, 72, 74, 116, 164, 166, 225, 227, 252, 253, 261, 432, 633, 635, 638]
+  intro: [3, 5, 7]             # title pages, preface
+  toc: [634]                   # table of contents
+  ref: [636]                   # errata
+
+# OCR settings
+ocr:
+  dpi: 300
+  # OCR engine options for Vietnamese (Quốc Ngữ):
+  # 'vietocr' (state-of-the-art AI OCR on scanned images)
+  # 'pdf_text' (extract directly from PDF embedded text layer)
+  vi_engine: "pdf_text"
+  vietocr_model: "vgg_transformer"
+  ch_lang: "ch"           # Chinese for Hán Nôm
+  vi_lang: "vi"           # Vietnamese for Quốc Ngữ
+  use_gpu: false
+  gpu_mem: 3500            # MB, safe limit for 4GB 3050
+  det_db_thresh: 0.3
+  rec_batch_num: 6
+
+# Output
+output_dir: "output"
+student_ids: "MSSV1_MSSV2_MSSV3_MSSV4"  # Update later
+

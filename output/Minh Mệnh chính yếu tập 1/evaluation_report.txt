@@ -1,0 +1,29 @@
+==================================================
+ALIGNMENT EVALUATION REPORT (WOODBLOCK LEVEL)
+==================================================
+  Total pairs:       401
+  Matched pairs:     401
+  Empty Nôm:         0
+  Empty Quốc Ngữ:    0
+  Total Nôm chars:   44593
+  Total QN chars:    207242
+  Total chars:       251835
+  Red chars:         0
+  Similarity:        100.0%
+  Passes (≥95%):     ✓ YES
+==================================================
+
+==================================================
+SENTENCE-LEVEL SUB-DIVIDED ALIGNMENT REPORT
+==================================================
+  Total pairs:       1447
+  Matched pairs:     1447
+  Empty Nôm:         0
+  Empty Quốc Ngữ:    0
+  Total Nôm chars:   44593
+  Total QN chars:    206529
+  Total chars:       251122
+  Red chars:         0
+  Similarity:        100.0%
+  Passes (≥95%):     ✓ YES
+==================================================

@@ -1,0 +1,24 @@
+{
+  "total_pairs": 401,
+  "matched_pairs": 401,
+  "empty_nom": 0,
+  "empty_vn": 0,
+  "total_nom_chars": 44593,
+  "total_vn_chars": 207242,
+  "total_chars": 251835,
+  "red_chars": 0,
+  "similarity_pct": 100.0,
+  "passes": true,
+  "sentences": {
+    "total_pairs": 1447,
+    "matched_pairs": 1447,
+    "empty_nom": 0,
+    "empty_vn": 0,
+    "total_nom_chars": 44593,
+    "total_vn_chars": 206529,
+    "total_chars": 251122,
+    "red_chars": 0,
+    "similarity_pct": 100.0,
+    "passes": true
+  }
+}
