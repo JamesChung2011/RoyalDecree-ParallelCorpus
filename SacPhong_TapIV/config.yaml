@@ -1,0 +1,74 @@
+# STEP 2 PILOT — preserves Step 1 crop coordinates
+book_name: Sac_phong_Tap_IV
+pdf_path: source.pdf
+layout_type: SAC_PHONG_MIXED
+output_dir: output
+book_code: PILOT
+ocr:
+  dpi: 220
+  vi_engine: tesseract
+  # Chinese OCR: compare preprocessing variants without overwriting the baseline.
+  han_variants: [original, clahe, gray_upscaled, ink_threshold]
+  # Optional comparison only; requires chi_tra or chi_tra_vert Tesseract data.
+  han_compare_tesseract: true
+  # Tesseract default location on Windows; change only if installed elsewhere
+  # tesseract_path: "C:/Program Files/Tesseract-OCR/tesseract.exe"
+  han_rotation: clockwise
+  # The second decree on page 8 is written roughly horizontally.
+  # 'none' is an experiment, not a verified fix to Hán character recognition.
+  han_rotation_overrides:
+    PILOT.008.02: none
+page_regions:
+  6:
+  - han:
+    - 0.06
+    - 0.126
+    - 0.58
+    - 0.455
+    viet:
+    - 0.625
+    - 0.125
+    - 0.98
+    - 0.455
+  - han:
+    - 0.06
+    - 0.51
+    - 0.58
+    - 0.834
+    viet:
+    - 0.625
+    - 0.51
+    - 0.98
+    - 0.816
+  7:
+  - han:
+    - 0.064
+    - 0.132
+    - 0.965
+    - 0.616
+    viet:
+    - 0.06
+    - 0.642
+    - 0.97
+    - 0.834
+  8:
+  - han:
+    - 0.068
+    - 0.11
+    - 0.583
+    - 0.43
+    viet:
+    - 0.625
+    - 0.112
+    - 0.981
+    - 0.462
+  - han:
+    - 0.068
+    - 0.492
+    - 0.584
+    - 0.79
+    viet:
+    - 0.625
+    - 0.495
+    - 0.981
+    - 0.842
