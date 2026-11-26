@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+output/
+dictionaries/
+source.pdf
+*.zip
+_archive*/
+_development_archive/

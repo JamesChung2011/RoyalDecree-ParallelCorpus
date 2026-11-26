@@ -1,0 +1,48 @@
+{
+  "source_book": "Sac_phong_Tap_IV",
+  "pdf_pages_expected": 175,
+  "non_content_pages": {
+    "1": "Front cover",
+    "2": "Title page",
+    "3": "Editorial introduction",
+    "4": "Editorial introduction / signature",
+    "5": "Section divider, part I",
+    "54": "Section divider, part II",
+    "172": "Table of contents",
+    "173": "Table of contents",
+    "174": "Table of contents",
+    "175": "Publication information"
+  },
+  "decree_page_overrides": {
+    "62": {
+      "reason": "Two side-by-side pairs: upper silk has insufficient contrast for the row-run detector",
+      "layout": "side_by_side",
+      "documents": [
+        {"han_bbox_normalized": [0.045, 0.138, 0.575, 0.407], "viet_bbox_normalized": [0.582, 0.124, 0.985, 0.441]},
+        {"han_bbox_normalized": [0.044, 0.469, 0.575, 0.811], "viet_bbox_normalized": [0.582, 0.467, 0.985, 0.897]}
+      ]
+    },
+    "86": {
+      "reason": "A single wide, torn silk edict: thin irregular shape defeats row-run detector",
+      "layout": "stacked",
+      "documents": [
+        {"han_bbox_normalized": [0.055, 0.170, 0.987, 0.497], "viet_bbox_normalized": [0.055, 0.548, 0.985, 0.864]}
+      ]
+    },
+    "95": {
+      "reason": "Two decree images: damage splits the upper decree into multiple false regions",
+      "layout": "side_by_side",
+      "documents": [
+        {"han_bbox_normalized": [0.035, 0.145, 0.575, 0.450], "viet_bbox_normalized": [0.580, 0.126, 0.985, 0.495]},
+        {"han_bbox_normalized": [0.035, 0.494, 0.575, 0.830], "viet_bbox_normalized": [0.580, 0.494, 0.985, 0.893]}
+      ]
+    },
+    "107": {
+      "reason": "One full-width decree with translation below, despite borderline right-side ink density",
+      "layout": "stacked",
+      "documents": [
+        {"han_bbox_normalized": [0.049, 0.142, 0.963, 0.559], "viet_bbox_normalized": [0.050, 0.568, 0.986, 0.868]}
+      ]
+    }
+  }
+}
