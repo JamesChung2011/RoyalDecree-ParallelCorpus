@@ -72,7 +72,11 @@ ocr:
 
 ### Run full pipeline
 ```bash
+# Run for Tập 1 (default)
 python pipeline.py
+
+# Run for Tập 2
+python pipeline.py --config config_tap2.yaml
 ```
 
 ### Run individual steps

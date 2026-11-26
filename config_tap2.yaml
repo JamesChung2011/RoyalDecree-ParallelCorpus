@@ -1,0 +1,60 @@
+# === Book Configuration ===
+# Minh Mệnh chính yếu tập 2
+
+book_name: "Minh Mệnh chính yếu tập 2"
+pdf_path: "Minh Mệnh chính yếu tập 2_ocr.pdf"
+
+# Page ranges (1-indexed, inclusive)
+# Layout type: T1 (Quốc Ngữ first half, Nôm second half)
+layout_type: "T1"
+
+pages:
+  total: 416
+
+  # Vietnamese (Quốc Ngữ) content pages
+  vi_start: 9
+  vi_end: 146
+
+  # Hán Nôm content pages  
+  ch_start: 150
+  ch_end: 413
+
+  # Special pages (lists of 1-indexed page numbers)
+  misc: [1, 415]
+  blank: [2, 4, 6, 8, 32, 34, 88, 147, 148, 149, 197, 414, 416]
+  intro: [3, 5, 7, 33, 87]
+  toc: []
+  ref: []
+
+sections:
+  - name: "Quyển 5"
+    nom_start: 150
+    nom_end: 196
+    vi_start: 9
+    vi_end: 31
+  - name: "Quyển 6"
+    nom_start: 198
+    nom_end: 301
+    vi_start: 35
+    vi_end: 86
+  - name: "Quyển 7"
+    nom_start: 302
+    nom_end: 413
+    vi_start: 89
+    vi_end: 146
+
+# OCR settings
+ocr:
+  dpi: 300
+  vi_engine: "pdf_text"
+  vietocr_model: "vgg_transformer"
+  ch_lang: "ch"           # Chinese for Hán Nôm
+  vi_lang: "vi"           # Vietnamese for Quốc Ngữ
+  use_gpu: false
+  gpu_mem: 3500            # MB, safe limit for 4GB 3050
+  det_db_thresh: 0.3
+  rec_batch_num: 6
+
+# Output
+output_dir: "output"
+student_ids: "MSSV1_MSSV2_MSSV3_MSSV4"

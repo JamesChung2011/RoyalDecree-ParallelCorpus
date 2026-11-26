@@ -100,6 +100,48 @@ def evaluate_alignment(cfg: dict) -> dict:
         sent_results = evaluate_df(sent_df)
         results["sentences"] = sent_results
 
+    report_text = f"""==================================================
+ALIGNMENT EVALUATION REPORT (WOODBLOCK LEVEL)
+==================================================
+  Total pairs:       {results['total_pairs']}
+  Matched pairs:     {results['matched_pairs']}
+  Empty Nôm:         {results['empty_nom']}
+  Empty Quốc Ngữ:    {results['empty_vn']}
+  Total Nôm chars:   {results['total_nom_chars']}
+  Total QN chars:    {results['total_vn_chars']}
+  Total chars:       {results['total_chars']}
+  Red chars:         {results['red_chars']}
+  Similarity:        {results['similarity_pct']}%
+  Passes (≥95%):     {'✓ YES' if results['passes'] else '✗ NO'}
+==================================================
+"""
+    if "sentences" in results:
+        sr = results["sentences"]
+        report_text += f"""
+==================================================
+SENTENCE-LEVEL SUB-DIVIDED ALIGNMENT REPORT
+==================================================
+  Total pairs:       {sr['total_pairs']}
+  Matched pairs:     {sr['matched_pairs']}
+  Empty Nôm:         {sr['empty_nom']}
+  Empty Quốc Ngữ:    {sr['empty_vn']}
+  Total Nôm chars:   {sr['total_nom_chars']}
+  Total QN chars:    {sr['total_vn_chars']}
+  Total chars:       {sr['total_chars']}
+  Red chars:         {sr['red_chars']}
+  Similarity:        {sr['similarity_pct']}%
+  Passes (≥95%):     {'✓ YES' if sr['passes'] else '✗ NO'}
+==================================================
+"""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    txt_path = output_dir / "evaluation_report.txt"
+    with open(txt_path, "w", encoding="utf-8") as f:
+        f.write(report_text)
+
+    json_path = output_dir / "evaluation_report.json"
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
     return results
 
 

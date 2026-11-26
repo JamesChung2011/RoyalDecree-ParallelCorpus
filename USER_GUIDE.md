@@ -82,7 +82,11 @@ student_ids: "MSSV1_MSSV2_MSSV3_MSSV4"
 ### Cách 1: Chạy Tự Động Toàn Bộ Pipeline (Khuyến nghị)
 Chạy toàn bộ pipeline từ đầu đến cuối chỉ với 1 lệnh:
 ```bash
+# Chạy cho Tập 1 (mặc định)
 python pipeline.py
+
+# Chạy cho Tập 2
+python pipeline.py --config config_tap2.yaml
 ```
 
 ---
